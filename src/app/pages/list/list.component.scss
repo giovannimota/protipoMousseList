@@ -1,0 +1,92 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    margin: 15px;
+    width: 700px;
+    background-color: rgba(255, 255, 255, 0.486);
+    color: black;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    background-color: rgb(160, 160, 160);
+}
+#testCardA {
+    background-color: hsl(347, 97%, 54%);
+}
+#testCardB {
+    background-color: hsl(153, 53%, 53%);
+}
+#testCardC {
+    background-color: rgb(255, 203, 60);
+}
+.card:hover {
+    cursor: pointer;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header h1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Satisfy', cursive;
+    font-size: 90px;
+    color: white;
+    padding: 15px 15px 0 15px;
+    filter: drop-shadow(15px 5px 4px #241f2c);
+}
+header hr {
+    margin: 0 0 15px 0;
+    width: 80%;
+}
+.Atalho {
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.Atalho button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    border: none;
+}
+#AddToDo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin: 15px;
+    font-size: 25px;
+}
+.AreaButtonAddToDo {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#card-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.DateSpace {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+}
+.DateSpace .icon {
+    margin: 10px;
+}

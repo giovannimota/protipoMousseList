@@ -1,0 +1,13 @@
+.card {
+    width: 500px;
+    margin: 15px;
+    filter: drop-shadow(1px 1px 5px #000000);
+}
+.card:hover .card-header{
+    cursor: pointer;
+    background-color: rgb(212, 212, 212);
+}
+.card:hover .card-content {
+    cursor: pointer;
+    background-color: rgb(235, 235, 235);
+}

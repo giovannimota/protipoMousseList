@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+$primary: rgb(250, 100, 0);
+html {
+
+    background-image: linear-gradient(to right, #2a0845, #6441A5, #2a0845);
+
+    background-attachment: fixed;  /* <- here it is */
+
+}

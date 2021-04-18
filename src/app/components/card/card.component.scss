@@ -1,0 +1,36 @@
+.card {
+    margin: 15px;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+}
+.input {
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    box-shadow: none;
+    padding: 0px;
+}
+.input:focus {
+    border: solid 1px black;
+    padding: 5px;
+}
+.input-description {
+    width: 600px;
+    font-size: medium;
+    border: none;
+    box-shadow: none;
+    padding: 0px;
+}
+.input-description:focus {
+    border: solid 1px black;
+    padding: 5px;
+}
+.textarea-description {
+    text-decoration: none;
+    border: none;
+    width: 600px;
+    height: 100px;
+    font-size: medium;
+}

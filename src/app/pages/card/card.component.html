@@ -1,0 +1,32 @@
+<div class="ToDoList">
+    <div *ngFor="let elements of list" class="card">
+        <header class="card-header">
+            <p class="card-header-title">
+                {{elements.title}}
+            </p>
+            <button class="card-header-icon" aria-label="more options">
+                <div *ngIf="elements.role == 'reader'">
+                    <span class="mdi mdi-36px mdi-glasses"></span>
+                </div>
+                <div *ngIf="elements.role == 'owner'">
+                    <span class="mdi mdi-36px mdi-account-tie"></span>
+                </div>
+                <div *ngIf="elements.role == 'contributor'">
+                    <span class="mdi mdi-36px mdi-account"></span>
+                </div>
+            </button>
+        </header>
+        <div class="card-content">
+            <div class="content">
+                {{elements.description}}
+                <br>
+                <time datetime="2016-1-1">{{elements.deadlineDate}}</time>
+            </div>
+        </div>
+        <footer class="card-footer">
+            <a href="#" class="card-footer-item">More</a>
+            <a href="#" class="card-footer-item">Edit</a>
+            <a href="#" class="card-footer-item">Delete</a>
+        </footer>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="content">
+    <div class="card" *ngFor="let element of todo" (click)="selectItem()">
+        <header class="card-header" *ngIf="element.done == false">
+            <p class="card-header-title">
+                {{ element.title }}
+            </p>
+        </header>
+        <header id="testCardB" class="card-header" *ngIf="element.done == true">
+            <p class="card-header-title">
+                {{ element.title }}
+            </p>
+        </header>
+        <div class="card-content">
+            <p><strong>Descrição</strong></p>
+            <p>{{ element.description }}</p>
+            <br>
+
+            <div class="DateSpace">
+                <span class="icon has-text-danger">
+                    <span class="mdi mdi-36px mdi-calendar-remove"></span>
+                </span>
+                <p>{{ formatDate(element.deadlineDate) }}</p>
+            </div>
+
+            <div class="DateSpace">
+                <span class="icon has-text-warning">
+                    <span class="mdi mdi-36px mdi-calendar-clock"></span>
+                </span>
+                <p> {{ calculate(element.deadlineDate, element.initDate) }} </p>
+            </div>
+
+            <p>Data de notificação da expiração</p>
+            <p>Lista de anexos</p>
+
+        </div>
+    </div>
+    <div *ngIf="showModal">
+        <div class="modal is-active">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Modal title</p>
+                    <button class="delete" aria-label="close" (click)="selectItem()"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="file has-name">
+                        <label class="file-label">
+                            <input class="file-input" type="file" name="resume">
+                            <span class="file-cta">
+                                <span class="file-icon">
+                                    <i class="fas fa-upload"></i>
+                                </span>
+                                <span class="file-label">
+                                    Choose a file…
+                                </span>
+                            </span>
+                            <span class="file-name">
+                                Screen Shot 2017-07-29 at 15.54.25.png
+                            </span>
+                        </label>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Save changes</button>
+                    <button class="button" (click)="selectItem()">Cancel</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="AreaButtonAddToDo">
+    <button (click)="selectItem()" id="AddToDo" class="button is-white">
+        <span class="icon">
+            <span class="mdi mdi-36px mdi-plus"></span>
+        </span>
+    </button>
+</div>
